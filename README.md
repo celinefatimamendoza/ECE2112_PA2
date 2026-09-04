@@ -30,9 +30,9 @@ where ¯x is the mean of all 25 elements and σ is their population standard dev
 NumPy’s default **std()** call. Store the normalized array in `X_normalized`.
 
 ### Function: 
-  ~ **np.random.seed()** -
+  ~ **np.random.seed()** -  
   
-   *Example:* 
+   *Example:*  
      ```np.random.seed(2112)```   
      
   ~ **np.random.randint()** -  
@@ -42,17 +42,17 @@ NumPy’s default **std()** call. Store the normalized array in `X_normalized`.
 
    ~ **np.mean()** -  
 
-   *Example:* 
+   *Example:*  
        ```np.mean(X)```  
 
    ~ **np.std()** -  
 
-   *Example:*
+   *Example:*  
       ```np.std (X)```  
 
    ~ **np.save()** -  
 
-   *Example:*  
+   *Example:*    
       ```np.save("X_normalized.npy", X_normalized)``` 
 
   ```python
@@ -77,20 +77,23 @@ np.save("X_normalized.npy", X_normalized)
 
 ### B. CUBES DIVISIBLE BY 4 PROBLEM
 Using NumPy, create the first 100 positive integers, cube every element, and reshape the result into a
-10 × 10 ndarray named C. Thus, C begins with 1<sup>3</sup> and ends with 100<sup>3</sup>.   
-Use a Boolean condition on C to obtain every cubed value divisible by 4. Store the selected values in
-div_by_4. Preserve NumPy’s normal row-major selection order.
+**10 × 10 ndarray** named **C**. Thus, *C* begins with 1<sup>3</sup> and ends with 100<sup>3</sup>.   
+
+Use a Boolean condition on **C** to obtain every cubed value divisible by 4. Store the selected values in
+`div_by_4`. Preserve NumPy’s normal row-major selection order.
 
 ### Function:
    ~ **np.arange ()** -  
    
-   *Example:* 
+   *Example:*     
       ```np.arange (1, 101, 1)```  
       
    ~ **.reshape()** -  
    
-   *Example:* 
-   ```C.reshape(10,10)```
+   *Example:*   
+   ```C.reshape(10,10)```  
+
+   ~ **div_by_4** -  
 
    
    ```python
@@ -108,4 +111,47 @@ np.save("div_by_4.npy", div_by_4)
 ```
 
 
+### C. ABOVE-MEAN SQUARES PROBLEM  
+Create a **6 × 6 ndarray** named **S** containing the squares of the first **36** positive integers in increasing
+row-major order. Compute the mean of all elements of **S** and store it in `S_mean`. Then use Boolean
+filtering to select only the elements strictly greater than `S_mean`. Store these values in `above_mean`.  
+
+### Function:  
+   ~ **np.arange ()** -  
+
+   *Example:*   
+   ```np.arange (1, 37, 1)```  
+   
+   ~ **.reshape()** -  
+
+   *Example:*  
+   ```S.reshape(6,6)```  
+
+   ~ **above_mean** - 
+
+
+   ```python
+S = np.arange (1, 37, 1)
+S = S ** 2
+S = S.reshape(6,6)
+
+S_mean = np.mean(S)
+
+above_mean = S[S > S_mean]
+
+print ("S =", S)
+print ("S_mean = ", S_mean)
+print ("above_mean = ", above_mean)
+print ("The number of selected elements =", above_mean.size )
+
+np.save("above_mean.npy", above_mean)
+```
+
+
+#### *Thank you for reading!*  
+  
+  
+**README file Version History**   
+*September 3, 2026* - Published the repository (included files: 3 .npy, 1 .ipynb, and README.md).  
+*September 4, 2026* - Completed the content of the README file.
 
