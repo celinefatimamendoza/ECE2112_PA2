@@ -30,30 +30,30 @@ where ¯x is the mean of all 25 elements and σ is their population standard dev
 NumPy’s default **std()** call. Store the normalized array in `X_normalized`.
 
 ### Function: 
-  ~ **np.random.seed()** -  
+  ~ **np.random.seed()** - This function initializes random-generated values that present the same sequence every time.  
   
    *Example:*  
      ```np.random.seed(2112)```   
      
-  ~ **np.random.randint()** -  
+  ~ **np.random.randint()** - This function generates random integers from a specific range given by the coder.   
   
    *Example:*    
-        ```np.random.randint(10, 101, size=(5, 5))```  
+        ```np.random.randint(10, 101, size=(5, 5))``` - In this example, the *(5,5)* shows the size of the array the matrix will be. The first parameter that has *10* specifies the lowest possible integer. The parameter beside it is the upper boundary, which is exclusive, so it ends at 100.  
 
-   ~ **np.mean()** -  
+   ~ **np.mean()** - This computes the average value of the elements from the specified data.  
 
    *Example:*  
        ```np.mean(X)```  
 
-   ~ **np.std()** -  
+   ~ **np.std()** - This computes the standard deviation of the elements from the specified data.  
 
    *Example:*  
       ```np.std (X)```  
 
-   ~ **np.save()** -  
+   ~ **np.save()** - This saves the file as an `.npy` file.  
 
    *Example:*    
-      ```np.save("X_normalized.npy", X_normalized)``` 
+      ```np.save("X_normalized.npy", X_normalized)``` - The ` "X_normalized.npy" ` is the file name where the data will be stored. Whereas `X_normalized` is the data inside the program.  
 
   ```python
 import numpy as np
@@ -80,20 +80,25 @@ Using NumPy, create the first 100 positive integers, cube every element, and res
 **10 × 10 ndarray** named **C**. Thus, *C* begins with 1<sup>3</sup> and ends with 100<sup>3</sup>.   
 
 Use a Boolean condition on **C** to obtain every cubed value divisible by 4. Store the selected values in
-`div_by_4`. Preserve NumPy’s normal row-major selection order.
+`div_by_4`. Preserve NumPy’s normal row-major selection order.  
 
-### Function:
-   ~ **np.arange ()** -  
+### Function:  
+   ~ **np.arange ()** - This creates an array with evenly spaced integers over a given interval.  
    
    *Example:*     
-      ```np.arange (1, 101, 1)```  
+      ```np.arange (1, 101, 1)``` - In this example, the first parameter inside the parentheses shows what value the array will start at, which is `1`. The middle parameter indicates what value it will stop. This is also exclusive, making it end at 100. The last parameter explains the gap between each value.  
       
-   ~ **.reshape()** -  
+   ~ **.reshape()** - This changes the dimensions of an array without modifying the values inside it.  
    
    *Example:*   
-   ```C.reshape(10,10)```  
+   ```C.reshape(10,10)``` - In this example, it states that the array will be reshaped into 10 rows and 10 columns.  
 
-   ~ **div_by_4** -  
+   ~ **div_by_4** -  This is a Boolean condition that works as a determining function for which cubed integers are divisible by 4.  
+
+   ~ **np.save()** - This saves the file as an `.npy` file.  
+
+   *Example:*    
+      ```np.save("div_by_4.npy", div_by_4)``` - The ` "div_by_4.npy" ` is the file name where the data will be stored. Whereas `div_by_4` is the data inside the program.   
 
    
    ```python
@@ -117,18 +122,22 @@ row-major order. Compute the mean of all elements of **S** and store it in `S_me
 filtering to select only the elements strictly greater than `S_mean`. Store these values in `above_mean`.  
 
 ### Function:  
-   ~ **np.arange ()** -  
+   ~ **np.arange ()** - This creates an array with evenly spaced integers over a given interval.  
 
    *Example:*   
-   ```np.arange (1, 37, 1)```  
+   ```np.arange (1, 37, 1)``` - In this example, the first parameter inside the parentheses shows what value the array will start at, which is `1`. The middle parameter indicates what value it will stop. This is also exclusive, making it end at 36. The last parameter explains the gap between each value.  
    
-   ~ **.reshape()** -  
+   ~ **.reshape()** - This changes the dimensions of an array without modifying the values inside it.  
 
    *Example:*  
-   ```S.reshape(6,6)```  
+   ```S.reshape(6,6)``` - In this example, it states that the array will be reshaped into 6 rows and 6 columns. 
 
-   ~ **above_mean** - 
+   ~ **above_mean** - This is a Boolean condition that works as a determining function for which elements are greater than the `S_mean`.  
 
+   ~ **np.save()** - This saves the file as an `.npy` file.  
+
+   *Example:*    
+      ```np.save("above_mean.npy", above_mean)``` - The ` "above_mean.npy" ` is the file name where the data will be stored. Whereas `above_mean` is the data inside the program. 
 
    ```python
 S = np.arange (1, 37, 1)
@@ -153,5 +162,5 @@ np.save("above_mean.npy", above_mean)
   
 **README file Version History**   
 *September 3, 2026* - Published the repository (included files: 3 .npy, 1 .ipynb, and README.md).  
-*September 4, 2026* - Completed the content of the README file. (d p hahahaha)
+*September 5, 2026* - Completed the content of the README file.
 
